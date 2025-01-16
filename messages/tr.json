@@ -2,7 +2,17 @@
     "HomePage": {
         "title": "<gradient>Full-Stack</gradient> Geliştirici.",
         "paragraph": "Temiz kod ve güçlü SEO ile erişilebilir ve yüksek performanslı web siteleri yapıyorum. Portfolyom geliştirme aşamasında - bu sırada bana e-posta, GitHub, ve LinkedIn üzerinden ulaşmanızdan mutluluk duyarım.",
-        "email": "E-posta"
+        "jobTitle": "Full-Stack Geliştirici",
+        "university": "Manisa Celal Bayar Üniversitesi",
+        "email": "E-posta",
+        "optimization": "Web Performans Optimizasyonu",
+        "multilanguage": "Çok Dilli Web Sitesi Oluşturma",
+        "responsive": "Mobil Uyumlu Web Geliştirme",
+        "frontend": "Front-end Geliştirme",
+        "backend": "Back-end Geliştirme",
+        "fullstack": "Full-stack Geliştirme",
+        "description": "Furkan Eryılmaz, yüksek performanslı ve SEO dostu web siteleri oluşturma konusunda deneyimli bir full-stack geliştiricidir. Next.js, SvelteKit ve Laravel gibi modern frameworklerde uzmanlaşmış olup ön uç ve arka uç geliştirme, duyarlı tasarım ve web uygulamalarını hız ve kullanılabilirlik açısından optimize etme konularında yetkindir. Çok dilli web sitesi oluşturma, web performans optimizasyonu ve kullanıcı dostu dijital çözümler sunmak için ileri teknolojileri entegre etme konularında uzmandır.",
+        "companyName": "Pella Global Dijital Pazarlama Ajansı"
     },
     "Metadata": {
         "title": "Full-Stack Geliştirici | Furkan Eryılmaz",

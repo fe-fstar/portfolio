@@ -33,10 +33,63 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function HomePage() {
+export default async function HomePage({ params }) {
+  const locale = (await params).locale;
   const m = await getTranslations("HomePage");
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Furkan Eryılmaz",
+    "alternateName": "F* (F-Star)",
+    "jobTitle": m("jobTitle"),
+    "worksFor": {
+      "@type": "Organization",
+      "name": m("companyName"),
+      "url": `https://pellaglobal.net${locale === "en" ? "" : `/${locale}`}`
+    },
+    "url": `https://fstar.dev${locale === defaultLocale ? "" : `/${locale}`}`,
+    "sameAs": [
+      "https://www.linkedin.com/in/furkane/",
+      "https://github.com/fe-fstar",
+    ],
+    "knowsAbout": [
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "Bootstrap",
+      "JavaScript",
+      "Python",
+      "React",
+      "Next.js",
+      "SvelteKit",
+      "Laravel",
+      "Node.js",
+      "PostgreSQL",
+      "MySQL",
+      m("frontend"),
+      m("backend"),
+      m("fullstack"),
+    ],
+    "skills": [
+      m("optimization"),
+      m("multilanguage"),
+      "SEO",
+      m("responsive")
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": m("university")
+    },
+    "gender": "Male",
+    "description": m("description")
+  }
+
   return (
     <main className='w-screen h-screen grid place-items-center'>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className='flex flex-col items-center justify-center gap-y-8 w-[min(1024px,95%)]'>
         <div className="text-center text-balance space-y-4">
           <h1 className='scroll-m-20 text-4xl font-goldman font-extrabold tracking-tight lg:text-5xl'>Furkan Eryılmaz</h1>

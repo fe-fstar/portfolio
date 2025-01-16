@@ -2,7 +2,17 @@
     "HomePage": {
         "title": "The <gradient>Full-Stack</gradient> Developer.",
         "paragraph": "I make accessible, high-performance websites with strong SEO and clean code. My portfolio is in the development process; in the meantime, feel free to contact me via email, GitHub, and LinkedIn.",
-        "email": "Email"
+        "jobTitle": "Full-Stack Developer",
+        "university": "Manisa Celal Bayar University",
+        "email": "Email",
+        "optimization": "Web Performance Optimization",
+        "multilanguage": "Multilanguage Website Creation",
+        "responsive": "Responsive Web Design",
+        "frontend": "Front-end Development",
+        "backend": "Back-end Development",
+        "fullstack": "Full-stack Development",
+        "description": "Furkan Eryılmaz is a skilled full-stack developer with extensive experience in creating high-performance, SEO-friendly websites. Proficient in modern frameworks like Next.js, SvelteKit, and Laravel, he specializes in front-end and back-end development, responsive design, and optimizing web applications for speed and usability. His expertise includes multilingual website creation, web performance optimization, and integrating advanced technologies to deliver user-friendly digital solutions.",
+        "companyName": "Pella Global Digital Marketing Agency"
     },
     "Metadata": {
         "title": "Full-Stack Developer | Furkan Eryılmaz",
