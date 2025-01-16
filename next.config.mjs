@@ -1,4 +1,20 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createNextIntlPlugin from 'next-intl/plugin';
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    generateBuildId: async () => {
+        return 'build';
+    },
+    webpack: (config, { buildId }) => {
+        config.output.filename = config.output.filename.replace('[chunkhash]', buildId);
+        return config;
+    },
+    swcMinify: true,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+};
+
+export default withNextIntl(nextConfig);

@@ -1,0 +1,11 @@
+{
+    "HomePage": {
+        "title": "The <shadowed>Full-Stack Developer</shadowed>.",
+        "paragraph": "I make accessible, high-performance websites with strong SEO and clean code. My portfolio is in the development process; in the meantime, feel free to contact me via email, GitHub, and LinkedIn.",
+        "email": "Email"
+    },
+    "Metadata": {
+        "title": "Full-Stack Developer | Furkan Eryılmaz",
+        "description": "Portfolio of Furkan Eryılmaz, a full-stack software developer specializing in high-performance web development, clean code, SEO, and user-centric design."
+    }
+}
