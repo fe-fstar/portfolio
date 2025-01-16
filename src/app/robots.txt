@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+
+User-agent: Googlebot
+Disallow: /*?amp*
+
+Sitemap: https://fstar.dev/sitemap.xml

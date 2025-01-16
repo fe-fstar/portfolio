@@ -5,6 +5,7 @@ import { GitHub, LinkedIn } from '@/components/Icons';
 import { getTranslations } from 'next-intl/server';
 import { Mail } from 'lucide-react';
 import { defaultLocale } from '@/i18n/config';
+import LocaleSelect from '@/components/LocaleSelect';
 
 export async function generateMetadata({ params }) {
   const locale = (await params).locale;
@@ -52,6 +53,7 @@ export default async function HomePage() {
           <a href="https://github.com/fe-fstar" title='Furkan Eryılmaz GitHub' target='_blank'><InteractiveHoverButton text="GitHub" icon={<GitHub className='size-8' />} className="border-primary/30" /></a>
           <a href="https://www.linkedin.com/in/furkane/" title='Furkan Eryılmaz LinkedIn' target='_blank'><InteractiveHoverButton text="LinkedIn" icon={<LinkedIn className='size-8' />} className="w-40 *:has-[svg]:gap-4 border-primary/30" /></a>
         </div>
+        <LocaleSelect className='absolute top-4 right-4'/>
         <RetroGrid />
       </div>
     </main>
