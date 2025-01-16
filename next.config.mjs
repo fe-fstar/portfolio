@@ -11,7 +11,6 @@ const nextConfig = {
         config.output.filename = config.output.filename.replace('[chunkhash]', buildId);
         return config;
     },
-    swcMinify: true,
     eslint: {
         ignoreDuringBuilds: true,
     },

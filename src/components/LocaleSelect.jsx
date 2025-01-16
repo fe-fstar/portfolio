@@ -37,7 +37,7 @@ export default function LocaleSelect({ className = "" }) {
             defaultValue={locale}
             disabled={isPending}
             onValueChange={onSelectChange}>
-            <SelectTrigger className={cn(className, "w-[180px]")}>
+            <SelectTrigger className={cn(className, "w-[100px]")}>
                 <SelectValue placeholder={locale} />
             </SelectTrigger>
             <SelectContent>

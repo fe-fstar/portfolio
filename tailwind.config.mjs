@@ -65,7 +65,7 @@ export default {
 			},
 			animation: {
 				grid: 'grid 15s linear infinite',
-				'line-shadow': 'line-shadow 15s linear infinite',
+				'line-shadow': 'line-shadow 15s linear infinite'
 			},
 			keyframes: {
 				grid: {
@@ -76,13 +76,9 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
-				'line-shadow': {
-					'0%': {
-						'background-position': '0 0'
-					},
-					'100%': {
-						'background-position': '100% -100%'
-					}
+				"text-flow": {
+					'0%': { "background-position": '0% 50%' },
+					'100%': { "background-position": '100% 50%' },
 				},
 			}
 		}
