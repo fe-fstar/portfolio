@@ -14,7 +14,7 @@ export default function DescriptionSection() {
     const sectionRef = useRef(null);
 
     return (
-        <section ref={sectionRef} className="w-[min(1200px,95%)] min-h-screen mx-auto flex max-lg:flex-col justify-center items-start gap-x-8 gap-y-16 max-lg:pb-32 overflow-hidden">
+        <section ref={sectionRef} className="w-[min(1200px,95%)] min-h-screen mx-auto flex max-lg:flex-col justify-center items-center gap-x-8 gap-y-16 max-lg:pb-32 overflow-hidden">
             <div className="basis-3/5">
                 <h2 className="flex flex-wrap break-words gap-x-[1ch]">{
                     m.rich('title', {
