@@ -46,7 +46,7 @@ export default function Projects() {
                             initial={{ rotateX: 90, opacity: 0 }}
                             whileInView={{ rotateX: 0, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 150, damping: 12 }}
-                            viewport={{ amount: 0.8 }}
+                            viewport={{ amount: 0.5 }}
                         >
                             <TabsTrigger
                                 value={project.id}
@@ -70,9 +70,9 @@ export default function Projects() {
                                         <CardDescription>{m(`${project.id}.description`)}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="mb-4">{m(`${project.id}.details`)}</p>
+                                        <p className="mb-4 max-sm:text-xs">{m(`${project.id}.details`)}</p>
                                         <div>
-                                            <p className="text-sm font-semibold mb-2">{m("techStack")}:</p>
+                                            <p className="text-sm max-sm:text-xs font-semibold mb-2">{m("techStack")}:</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {project.technologies.map((tech, index) => (
                                                     <span key={index} className={cn("px-2 py-1 rounded-md text-xs", tech.expired ? "bg-destructive text-destructive-foreground" : "bg-primary text-primary-foreground")}>
@@ -89,7 +89,7 @@ export default function Projects() {
                 ) : (
                     <div className="flex flex-col items-center justify-center p-8 border border-dashed border-border rounded-md bg-card">
                         <p className="text-xl font-semibold">{m("initial.getStarted")}</p>
-                        <p className="text-muted-foreground text-sm mt-2 flex items-center gap-x-[1ch]"><SquareMousePointer /> {m("initial.learnMore")}</p>
+                        <p className="text-muted-foreground text-sm mt-2 flex items-center gap-x-[1ch]"><SquareMousePointer size={16} /> {m("initial.learnMore")}</p>
                     </div>
                 )}
             </Tabs>

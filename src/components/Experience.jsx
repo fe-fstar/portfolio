@@ -71,9 +71,9 @@ export default function Experience() {
                                         <CardDescription>{m(`${experience.id}.description`)}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        {Object.values(messages.Experience[experience.id].details).map((detail, index) => <p key={index} className="mb-4">{detail}</p>)}
+                                        {Object.values(messages.Experience[experience.id].details).map((detail, index) => <p key={index} className="mb-4 max-sm:text-xs">{detail}</p>)}
                                         <div>
-                                            <h4 className="text-sm font-semibold mb-2">Tech stack:</h4>
+                                            <h4 className="text-sm max-sm:text-xs font-semibold mb-2">Tech stack:</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 {experience.technologies.map((tech, index) => (
                                                     <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs">
@@ -96,7 +96,7 @@ export default function Experience() {
                 ) : (
                     <div className="flex flex-col items-center justify-center p-8 border border-dashed border-border rounded-md bg-card">
                         <p className="text-xl font-semibold">Select an experience to get started</p>
-                        <p className="text-muted-foreground text-sm mt-2 flex items-center gap-x-[1ch]"><SquareMousePointer /> Click on a tab above to learn more.</p>
+                        <p className="text-muted-foreground text-sm mt-2 flex items-center gap-x-[1ch]"><SquareMousePointer size={16} /> Click on a tab above to learn more.</p>
                     </div>
                 )}
             </Tabs>
