@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button";
 import { GitHub, LinkedIn } from "@/components/Icons";
 import { Mail } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { Suspense, useRef } from "react";
+import { useRef } from "react";
 import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
+
+const Spotify = dynamic(() => import("@/components/Spotify"), { ssr: false });
 
 export default function ContactSection() {
     const contactRef = useRef(null);
@@ -77,19 +80,7 @@ export default function ContactSection() {
                 <ContactForm />
             </div>
             <div className="w-full space-y-4">
-                <Suspense fallback={"..."}>
-                    <iframe
-                        className="rounded-md *:bg-gradient-to-br *:from-meadow *:to-bangladesh"
-                        title="Spotify Playlist: Lawful Exposure"
-                        src="https://open.spotify.com/embed/playlist/75RCF0PBratBMhHadj0vnE?utm_source=generator&theme=0"
-                        width="100%"
-                        height="450"
-                        frameBorder="0"
-                        allowFullScreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                    />
-                </Suspense>
+                <Spotify />
                 <p className="text-center">
                     <i>
                         <small>{m("music")}</small>
