@@ -1,15 +1,12 @@
 "use client";
 
+import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { motion, useInView } from "motion/react";
+import ContactForm from "@/components/ContactForm";
 import { GitHub, LinkedIn } from "@/components/Icons";
 import { Mail } from "lucide-react";
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
-import ContactForm from "@/components/ContactForm";
-import { useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
-
-const Spotify = dynamic(() => import("@/components/Spotify"), { ssr: false });
 
 export default function ContactSection() {
     const contactRef = useRef(null);
@@ -32,7 +29,7 @@ export default function ContactSection() {
     };
 
     return (
-        <section ref={contactRef} className="w-full min-h-screen flex flex-col md:flex-row md:*:basis-1/2 justify-center items-center gap-4 px-8 py-8">
+        <section className="w-full min-h-screen flex flex-col md:flex-row md:*:basis-1/2 justify-center items-center gap-4 px-8 py-8">
             <div className="space-y-8">
                 <h4>
                     <strike>{m("strike")}</strike>
@@ -80,7 +77,17 @@ export default function ContactSection() {
                 <ContactForm />
             </div>
             <div className="w-full space-y-4">
-                <Spotify />
+                <iframe
+                    className="rounded-md"
+                    title="Spotify Playlist: Lawful Exposure"
+                    src="https://open.spotify.com/embed/playlist/75RCF0PBratBMhHadj0vnE?utm_source=generator&theme=0"
+                    width="100%"
+                    height="450"
+                    frameBorder="0"
+                    allowFullScreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                />
                 <p className="text-center">
                     <i>
                         <small>{m("music")}</small>
