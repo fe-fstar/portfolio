@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { GitHub, LinkedIn } from "@/components/Icons";
 import { Mail } from "lucide-react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "next-intl";
