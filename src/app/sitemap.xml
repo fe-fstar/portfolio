@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fstar.dev</loc>
-    <lastmod>2025-01-16</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fstar.dev/tr</loc>
-    <lastmod>2025-01-16</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 </urlset>

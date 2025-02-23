@@ -17,5 +17,93 @@
     "Metadata": {
         "title": "Full-Stack Geliştirici | Furkan Eryılmaz",
         "description": "Furkan Eryılmaz'ın portföyü: Yüksek performanslı web geliştirme, temiz kod, SEO ve kullanıcı odaklı tasarımda uzman full-stack yazılım geliştirici."
+    },
+    "HeroSection": {
+        "title": "Full-Stack Geliştirici<end>.</end>"
+    },
+    "DescriptionSection": {
+        "title": "<rotate></rotate> web siteleri yapıyorum.",
+        "rotation": {
+            "satiating": "Tok tutan",
+            "preoccupying": "Akıllarda kalan",
+            "unencumbered": "Boğulmayan",
+            "omnipresent": "Her yerde var olan"
+        },
+        "description": "Web sitelerinden en iyi şekilde faydalanmak isteyen bir <primary>full-stack geliştirici</primary>yim. İster <underline>görünürlük</underline>, <underline>işlevsellik</underline>, <underline>erişilebilirlik</underline>, <underline>hız</underline>, isterse <underline>şık bir tasarım</underline> olsun, bir web sitesinin yapabileceklerini en sağlam prensiplerle en iyi şekilde kullanmaya çalışıyorum.",
+        "myResume": "Öz Geçmişim",
+        "tldr": "Kaydırmaya Üşeniyorsanız",
+        "didYouKnowFStar": "F* (F-Star) takma adı yapay zekada arama algoritması olan A*'dan (A-Star) ve ismimin ilk harfinden esinlenilmiştir."
+    },
+    "HeadStart": {
+        "top": "Devam etmeni istemiyorum;",
+        "bottom": "Devam etmeni istemeni istiyorum."
+    },
+    "Projects": {
+        "techStack": "Kullanılan Teknolojiler",
+        "initial": {
+            "getStarted": "Başlamak için bir proje seçin",
+            "learnMore": "Daha fazlası için yukarıdan bir sekmeye tıklayın."
+        },
+        "tt": {
+            "description": "Çok Yönlü Verimlilik Aracı",
+            "details": "Önceden \"Multiple Timer\" olarak adlandırılan bu araç, yapılacaklar uygulamaları ve Pomodoro zamanlayıcılarının birleşimi olarak çok yönlü bir verimlilik aracıdır. Kullanıcılar, süresi olan veya olmayan adımlarla planlar oluşturabilir. Halihazırda, herkese açık / özel planlar ve başkalarının planlarını yer imlerine ekleme gibi özelliklerin eklenmesi için bakım aşamasındadır."
+        },
+        "em": {
+            "description": "Sınav Sonuç Değerlendirme Aracı",
+            "details": "Gelecekteki sınavların daha sağlıklı ve sürdürülebilir olması için sınav sorularının zorluk ve ayırt ediciliğini değerlendiren çevrimiçi bir sınav platformu geliştirdik."
+        },
+        "te": {
+            "description": "Yapay Zeka Destekli Destek Talebi Yanıt Sistemi",
+            "details": "Mevcut destek talebi girişlerini kullanarak, müşteri tarafından açılan taleplere hassas yanıtlar veren özel olarak eğitilmiş bir sohbet botu geliştirdik."
+        },
+        "mm": {
+            "description": "Üniversite Hizmetleri için Mobil Uygulama",
+            "details": "Okul hizmetleri (bildirimler, duyurular, öğrenci bilgileri, haftalık / aylık yemek listeleri vb.) için bir mobil uygulama geliştirdik. Bir frontend geliştirici olarak, dinamik veriler için kullanıcı arayüzlerini mühendislik ve kodlama süreçlerine katıldım."
+        }
+    },
+    "Experience": {
+        "techStack": "Kullanılan Teknolojiler",
+        "seo": "SEO (<spoiler>Her Yerde</spoiler> Arama Optimizasyonu)",
+        "initial": {
+            "getStarted": "Başlamak için bir deneyim seçin",
+            "learnMore": "Daha fazla bilgi edinmek için yukarıdaki sekmelere tıklayın."
+        },
+        "geliver": {
+            "description": "Akıllı Kargo Pazaryeri",
+            "link": "https://geliver.io",
+            "details": {
+                "1": "Teslimat detaylarının gelen ve devam eden dinamik verilerini görüntüleyen ve yöneten kullanıcı arayüzlerini kodladım."
+            }
+        },
+        "rmos": {
+            "description": "Otel Yazılım Sistemleri",
+            "link": "https://rmosyazilim.com",
+            "details": {
+                "1": "Müşteri yönetimi için pasaport / kimlik kartı görüntülerini okuyup bilgilerini çıkaran bir OCR sistemi geliştirdim.",
+                "2": "Personel yönetimi ve gelen görüntüleri işlemek için OCR sistemini içeren bir yönetici paneli kullanıcı arayüzü tasarlayıp geliştirdim."
+            }
+        },
+        "pellaglobal": {
+            "description": "Dijital Pazarlama & PR Ajansı",
+            "link": "https://pellaglobal.net/tr",
+            "details": {
+                "1": "Ortaklarımız için kapsamlı frontend & backend teknolojileriyle yüksek performanslı ve arama motoru optimizasyonuna sahip web siteleri sunuyor ve sürdürüyorum."
+            }
+        }
+    },
+    "Contact": {
+        "strike": "Ziyaretiniz için teşekkürler.",
+        "title": "Benimle vakit geçirmek için gösterdiğiniz çaba için size teşekkür etmekle mükellefim.",
+        "email": "E-posta",
+        "talkToMe": "Bana Bir Şeyler Anlat:",
+        "music": "Gerçek hayatta hissedemediğimiz şeyleri hissetmek için müziğe sığınırız."
+    },
+    "ContactForm": {
+        "name": "İsim",
+        "email": "E-posta",
+        "message": "Mesaj",
+        "send": "Gönder",
+        "success": "Mesajınız başarı ile gönderildi ✨",
+        "missing_field": "Lütfen isminizi ve mesajınızı girin 😔"
     }
 }

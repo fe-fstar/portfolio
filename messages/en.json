@@ -17,5 +17,93 @@
     "Metadata": {
         "title": "Full-Stack Developer | Furkan Eryılmaz",
         "description": "Portfolio of Furkan Eryılmaz, a full-stack software developer specializing in high-performance web development, clean code, SEO, and user-centric design."
+    },
+    "HeroSection": {
+        "title": "The Full-Stack Developer<end>.</end>"
+    },
+    "DescriptionSection": {
+        "title": "I make <rotate></rotate> websites.",
+        "rotation": {
+            "satiating": "satiating",
+            "preoccupying": "preoccupying",
+            "unencumbered": "unencumbered",
+            "omnipresent": "omnipresent"
+        },
+        "description": "I am a <primary>full-stack developer</primary> who wants to make the most out of websites. Whether the case is <underline>presence</underline>, <underline>functionality</underline>, <underline>accessibility</underline>, <underline>speed</underline>, or <underline>a fancy design</underline>, I strive to utilize what a website can do with the most solid principles.",
+        "myResume": "My Resumé",
+        "tldr": "TL;DR",
+        "didYouKnowFStar": "The nickname F* (F-Star) is inspired from the searching algorithm \"A*\" in artificial intelligence and my initial."
+    },
+    "HeadStart": {
+        "top": "I don't want you to keep going;",
+        "bottom": "I want you to want to keep going."
+    },
+    "Projects": {
+        "techStack": "Tech Stack",
+        "initial": {
+            "getStarted": "Select a project to get started",
+            "learnMore": "Click on a tab above to learn more."
+        },
+        "tt": {
+            "description": "Versatile Productivity Tool",
+            "details": "Previously titled \"Multiple Timer\", this is a versatile productivity tool as a merge of to-do apps and Pomodoro timers. Users can create plans which has described steps which may or may not have a duration. It is under maintenance to add improvements and features such as public / private plans and bookmarking others' plans."
+        },
+        "em": {
+            "description": "Exam Result Assessment Tool",
+            "details": "Developed an online exam platform which assesses the exam questions' difficulty and discrimination for future exams to be healthier and more sustainable."
+        },
+        "te": {
+            "description": "AI-Powered Ticket Response System",
+            "details": "Using the existing ticket entries, we developed a fine-tuned chatbot which precisely responds to tickets opened by customers."
+        },
+        "mm": {
+            "description": "Mobile App for University Services",
+            "details": "Developed a mobile app for school services (notifications, announcements, student information, weekly / monthly meals, etc.). As a frontend developer, I participated in engineering and coding user interfaces for dynamic data."
+        }
+    },
+    "Experience": {
+        "techStack": "Tech Stack",
+        "seo": "SEO (Search E<spoiler>verywhere</spoiler> Optimization)",
+        "initial": {
+            "getStarted": "Select an experience to get started",
+            "learnMore": "Click on a tab above to learn more."
+        },
+        "geliver": {
+            "description": "Smart Cargo Marketplace",
+            "link": "https://geliver.io",
+            "details": {
+                "1": "Coded user interfaces that display and handle incoming and ongoing dynamic data of delivery details."
+            }
+        },
+        "rmos": {
+            "description": "Hotel Software Systems",
+            "link": "https://rmosyazilim.com",
+            "details": {
+                "1": "Developed an OCR system that reads passport / identity card images and extracts their information for customer management.",
+                "2": "Designed and developed an admin panel UI that includes personnel management and the OCR system to handle incoming images."
+            }
+        },
+        "pellaglobal": {
+            "description": "Digital Marketing & PR Agency",
+            "link": "https://pellaglobal.net",
+            "details": {
+                "1": "Delivering and sustaining high performance and search engine optimized websites for our partners with inclusive frontend & backend tech stacks."
+            }
+        }
+    },
+    "Contact": {
+        "strike": "Thank you for visiting.",
+        "title": "I am obliged to thank you for your effort to spend time with me.",
+        "email": "Email",
+        "talkToMe": "Talk to Me",
+        "music": "We take shelter in music to feel things we cannot in real life."
+    },
+    "ContactForm": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send",
+        "success": "Your message has been sent successfully ✨",
+        "missing_field": "Please fill in your name and message 😔"
     }
 }

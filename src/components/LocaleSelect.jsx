@@ -5,7 +5,6 @@ import {
     SelectContent,
     SelectItem,
     SelectTrigger,
-    SelectValue,
 } from "@/components/ui/select";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/routing";
@@ -23,7 +22,6 @@ export default function LocaleSelect({ className = "" }) {
 
     function onSelectChange(event) {
         const nextLocale = event;
-        console.log(params);
         startTransition(() => {
             router.replace(
                 { pathname, params },
@@ -37,8 +35,8 @@ export default function LocaleSelect({ className = "" }) {
             defaultValue={locale}
             disabled={isPending}
             onValueChange={onSelectChange}>
-            <SelectTrigger className={cn(className, "w-[100px]")}>
-                <SelectValue placeholder={locale} />
+            <SelectTrigger id="language" aria-label="Language" className={cn(className, "w-[100px]")}>
+                {locale.toUpperCase()}
             </SelectTrigger>
             <SelectContent>
                 {locales.map(localeItem =>

@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
+    --background: 169 35% 6%;
+    --foreground: 170 27% 96%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
-    --primary: 142.1 70.6% 45.3%;
-    --primary-foreground: 144.9 80.4% 10%;
+    --primary: 155 100% 44%;
+    --primary-foreground: 178 84% 7%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 15%;
@@ -24,11 +24,28 @@
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
     --radius: 0.5rem;
+    --path2-length: 73.025;
+    --path3-length: 61.764;
+    --path4-length: 46.003;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --bangladesh: 166, 94%, 20%;
+    --meadow: 162, 63%, 47%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+  .dark {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
   }
 }
 
@@ -38,6 +55,46 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sometype-mono selection:text-background selection:bg-primary;
+    @apply bg-background text-foreground selection:text-background selection:bg-primary;
+  }
+
+  h1 {
+    @apply scroll-m-20 text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 md:text-3xl;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight md:text-2xl;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-lg font-semibold tracking-tight md:text-xl;
+  }
+
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  a, button {
+    @apply !cursor-fancy;
+  }
+}
+
+@layer utilities {
+  .clip-folder {
+    clip-path: polygon(67% 0, 100% 33%, 100% 100%, 0 100%, 0 0);
   }
 }

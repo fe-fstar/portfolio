@@ -2,17 +2,11 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { Goldman, Sometype_Mono } from "next/font/google";
+import { Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
-const goldman = Goldman({
-  variable: "--font-goldman",
-  subsets: ["latin"],
-  weight: ["400", "700"]
-});
-
-const sometypeMono = Sometype_Mono({
-  variable: "--font-sometype-mono",
+const pressStart2P = Press_Start_2P({
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -42,7 +36,7 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`antialiased ${goldman.variable} ${sometypeMono.variable}`}>
+    <html lang={locale} className={`antialiased ${pressStart2P.className}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
