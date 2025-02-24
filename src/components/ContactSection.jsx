@@ -10,7 +10,7 @@ import ContactForm from "@/components/ContactForm";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 
-const Spotify = dynamic(() => import("@/components/Spotify"), { ssr: false });
+const Spotify = dynamic(() => import("@/components/Spotify"), { ssr: false, loading: () => <div className="h-[450px] grid place-items-center">...</div> });
 
 export default function ContactSection() {
     const contactRef = useRef(null);

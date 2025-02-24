@@ -39,6 +39,7 @@
         "bottom": "Devam etmeni istemeni istiyorum."
     },
     "Projects": {
+        "title": "Projeler",
         "techStack": "Kullanılan Teknolojiler",
         "initial": {
             "getStarted": "Başlamak için bir proje seçin",
@@ -62,6 +63,7 @@
         }
     },
     "Experience": {
+        "title": "Deneyim",
         "techStack": "Kullanılan Teknolojiler",
         "seo": "SEO (<spoiler>Her Yerde</spoiler> Arama Optimizasyonu)",
         "initial": {

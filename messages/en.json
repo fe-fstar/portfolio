@@ -39,6 +39,7 @@
         "bottom": "I want you to want to keep going."
     },
     "Projects": {
+        "title": "Projects",
         "techStack": "Tech Stack",
         "initial": {
             "getStarted": "Select a project to get started",
@@ -62,6 +63,7 @@
         }
     },
     "Experience": {
+        "title": "Experience",
         "techStack": "Tech Stack",
         "seo": "SEO (Search E<spoiler>verywhere</spoiler> Optimization)",
         "initial": {

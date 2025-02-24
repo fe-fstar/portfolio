@@ -27,8 +27,8 @@ const HorizontalScroll = () => {
     return (
         <section ref={targetRef} className="relative h-[300vh]">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                <motion.div style={{ x }} className="flex flex-nowrap w-[300vw] *:w-screen *:h-screen *:flex-shrink-0 *:flex *:items-center *:justify-center *:bg-bangladesh">
-                    <div className="!flex-col gap-y-8">
+                <motion.div style={{ x }} className="flex flex-nowrap w-[300vw] *:w-screen *:h-screen *:flex-shrink-0 *:flex *:pt-8 *:justify-center *:bg-bangladesh">
+                    <div className="!flex-col items-center gap-y-8">
                         <p>
                             <em>{m("top")}</em>
                         </p>

@@ -38,6 +38,7 @@ export default function Projects() {
 
     return (
         <div className="w-[min(960px,95%)] mx-auto p-4">
+            <h3 className="sr-only">{m("title")}</h3>
             <Tabs value={activeProject} onValueChange={setActiveProject}>
                 <TabsList className="grid w-full grid-cols-4 bg-transparent *:origin-bottom">
                     {projects.map((project) => (
@@ -70,7 +71,7 @@ export default function Projects() {
                                         <CardDescription>{m(`${project.id}.description`)}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="mb-4 max-sm:text-xs">{m(`${project.id}.details`)}</p>
+                                        <p className="mb-4 max-sm:text-[10px]">{m(`${project.id}.details`)}</p>
                                         <div>
                                             <p className="text-sm max-sm:text-xs font-semibold mb-2">{m("techStack")}:</p>
                                             <div className="flex flex-wrap gap-2">

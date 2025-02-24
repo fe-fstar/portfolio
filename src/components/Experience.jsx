@@ -36,6 +36,7 @@ export default function Experience() {
 
     return (
         <div className="w-[min(960px,95%)] mx-auto p-4">
+            <h3 className="sr-only">{m("title")}</h3>
             <Tabs value={activeExperience} onValueChange={setActiveExperience}>
                 <TabsList className="grid w-full grid-cols-3 bg-transparent *:origin-bottom">
                     {experiences.map((experience) => (
@@ -71,9 +72,9 @@ export default function Experience() {
                                         <CardDescription>{m(`${experience.id}.description`)}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        {Object.values(messages.Experience[experience.id].details).map((detail, index) => <p key={index} className="mb-4 max-sm:text-xs">{detail}</p>)}
+                                        {Object.values(messages.Experience[experience.id].details).map((detail, index) => <p key={index} className="mb-4 max-sm:text-[10px]">{detail}</p>)}
                                         <div>
-                                            <h4 className="text-sm max-sm:text-xs font-semibold mb-2">Tech stack:</h4>
+                                            <h4 className="text-sm max-sm:text-xs font-semibold mb-2">{m("techStack")}:</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 {experience.technologies.map((tech, index) => (
                                                     <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs">
@@ -95,8 +96,8 @@ export default function Experience() {
                     )
                 ) : (
                     <div className="flex flex-col items-center justify-center p-8 border border-dashed border-border rounded-md bg-card">
-                        <p className="text-xl font-semibold">Select an experience to get started</p>
-                        <p className="text-muted-foreground text-sm mt-2 flex items-center gap-x-[1ch]"><SquareMousePointer size={16} /> Click on a tab above to learn more.</p>
+                        <p className="text-xl font-semibold">{m("initial.getStarted")}</p>
+                        <p className="text-muted-foreground text-sm mt-2 flex items-center gap-x-[1ch]"><SquareMousePointer size={16} /> {m("initial.learnMore")}</p>
                     </div>
                 )}
             </Tabs>
