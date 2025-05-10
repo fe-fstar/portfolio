@@ -93,6 +93,26 @@
             }
         }
     },
+    "Solutions": {
+        "role": "The Full-Stack Developer",
+        "title": "Full-Stack Development Solutions",
+        "descriptionTitle": "With best practices of full-stack development and design, I deliver solutions that combine performance and aesthetics.",
+        "descriptionList": {
+            "1": "Systematic optimizations such as caching, static and dynamic rendering, query tuning, parallel programming, and more.",
+            "2": "Tailored and well-engineered data structures and deployment strategies to ensure scalability and maintainability.",
+            "3": "UI/UX planning and design that assert your brand identity and persona, encouraging your target audience to stay and return.",
+            "4": "Multilingual keyword research and precise, meaningful content creation to ensure your target audience finds you."
+        },
+        "items": {
+            "1": "SEO",
+            "2": "UI / UX",
+            "3": "Parallel Programming",
+            "4": "Caching",
+            "5": "Static & Dynamic Rendering",
+            "6": "Query Optimization",
+            "7": "Scalable Design & Deployment"
+        }
+    },
     "Contact": {
         "strike": "Thank you for visiting.",
         "title": "I am obliged to thank you for your effort to spend time with me.",

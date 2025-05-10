@@ -33,7 +33,7 @@ export default function ContactSection() {
     };
 
     return (
-        <section ref={contactRef} className="w-full min-h-screen flex flex-col md:flex-row md:*:basis-1/2 justify-center items-center gap-4 px-8 py-8">
+        <section ref={contactRef} className="w-full min-h-page flex flex-col md:flex-row md:*:basis-1/2 justify-center items-center gap-4 px-8 py-8">
             <div className="space-y-8">
                 <h4>
                     <strike>{m("strike")}</strike>
@@ -48,7 +48,7 @@ export default function ContactSection() {
                         variants={buttonVariants}
                     >
                         <Button asChild className="bg-[#0072B1] text-foreground hover:bg-[#0061A0]">
-                            <a href="https://www.linkedin.com/in/furkane/" target="_blank" rel="nofollow">
+                            <a href="https://www.linkedin.com/in/furkane/" target="_blank" title="Furkan Eryılmaz LinkedIn" rel="noopener noreferrer">
                                 <LinkedIn className="fill-foreground" /> LinkedIn
                             </a>
                         </Button>
@@ -59,8 +59,8 @@ export default function ContactSection() {
                         animate={inView ? "visible" : "hidden"}
                         variants={buttonVariants}
                     >
-                        <Button asChild className="bg-[#0D1117] text-foreground hover:bg-[#0C0006] border border-foreground">
-                            <a href="https://github.com/fe-fstar" target="_blank" rel="nofollow">
+                        <Button asChild className="bg-[#0D1117] text-foreground hover:bg-[#0C0006] border border-foreground" title="Furkan Eryılmaz GitHub" rel="noopener noreferrer">
+                            <a href="https://github.com/fe-fstar" target="_blank">
                                 <GitHub className="fill-foreground" /> GitHub
                             </a>
                         </Button>
@@ -72,7 +72,7 @@ export default function ContactSection() {
                         variants={buttonVariants}
                     >
                         <Button asChild>
-                            <a href="mailto:furkane.kolta@gmail.com" target="_blank" rel="nofollow">
+                            <a href="mailto:furkane.kolta@gmail.com" target="_blank" title="Furkan Eryılmaz Mail" rel="noopener noreferrer">
                                 <Mail /> {m("email")}
                             </a>
                         </Button>
@@ -82,7 +82,7 @@ export default function ContactSection() {
             </div>
             <div className="w-full space-y-4">
                 <Spotify />
-                <p className="text-center">
+                <p className="text-center text-balance">
                     <i>
                         <small>{m("music")}</small>
                     </i>

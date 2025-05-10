@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Press_Start_2P } from "next/font/google";
 import "./globals.css";
+import ScrollIndicator from '@/components/ScrollIndicator';
 
 const pressStart2P = Press_Start_2P({
   weight: "400",
@@ -36,8 +37,9 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`antialiased ${pressStart2P.className}`}>
+    <html lang={locale} className={`${pressStart2P.className}`}>
       <body>
+        <ScrollIndicator />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

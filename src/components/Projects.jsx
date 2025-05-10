@@ -37,7 +37,7 @@ export default function Projects() {
     const m = useTranslations("Projects");
 
     return (
-        <div className="w-[min(960px,95%)] mx-auto p-4">
+        <div className={cn("w-[min(960px,95%)] mx-auto p-4 overflow-y-auto", !activeProject ? "grid place-items-center" : "")}>
             <h3 className="sr-only">{m("title")}</h3>
             <Tabs value={activeProject} onValueChange={setActiveProject}>
                 <TabsList className="grid w-full grid-cols-4 bg-transparent *:origin-bottom">

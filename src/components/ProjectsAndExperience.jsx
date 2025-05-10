@@ -20,12 +20,12 @@ const HorizontalScroll = () => {
         restDelta: 0.001,
     });
 
-    const x = useTransform(smoothProgress, [0, 1], ["0%", "-67%"]);
+    const x = useTransform(smoothProgress, [0, 1], ["0%", "-66.666%"]);
 
     const m = useTranslations("HeadStart");
 
     return (
-        <section ref={targetRef} className="relative h-[300vh]">
+        <section ref={targetRef} className="relative h-[300vw]">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex flex-nowrap w-[300vw] *:w-screen *:h-screen *:flex-shrink-0 *:flex *:pt-8 *:justify-center *:bg-bangladesh">
                     <div className="!flex-col items-center gap-y-8">

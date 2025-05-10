@@ -93,6 +93,26 @@
             }
         }
     },
+    "Solutions": {
+        "role": "Full-Stack Geliştirici",
+        "title": "Full-Stack Geliştirme Çözümleri",
+        "descriptionTitle": "En iyi full-stack geliştirme ve tasarımı pratikleriyle, performans ve estetiği birleştiren çözümler sunuyorum.",
+        "descriptionList": {
+            "1": "Önbellekleme, statik ve dinamik render, sorgu optimizasyonları, paralel programlama gibi sistematik iyileştirmeler.",
+            "2": "Ölçeklenebilirlik ve sürdürülebilirlik için özel olarak tasarlanmış veri yapıları ve dağıtım stratejileri.",
+            "3": "Markanızı ve kimliğinizi yansıtan, hedef kitlenizin sitede kalmasını ve tekrar ziyaret etmesini sağlayan UI/UX planlaması ve tasarımı.",
+            "4": "Hedef kitlenizin sizi bulmasını sağlayan çok dilli anahtar kelime araştırması ve anlamlı, net içerik üretimi."
+        },
+        "items": {
+            "1": "SEO",
+            "2": "UI / UX",
+            "3": "Paralel Programlama",
+            "4": "Önbellekleme",
+            "5": "Statik & Dinamik Render",
+            "6": "Sorgu Optimizasyonu",
+            "7": "Ölçeklenebilir Geliştirme & Dağıtım"
+        }
+    },
     "Contact": {
         "strike": "Ziyaretiniz için teşekkürler.",
         "title": "Benimle vakit geçirmek için gösterdiğiniz çaba için size teşekkür etmekle mükellefim.",

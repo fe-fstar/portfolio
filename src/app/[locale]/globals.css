@@ -39,23 +39,23 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+    --rose-1: 352, 71%, 77%;
+    --rose-2: 353, 100%, 93%;
   }
-  .dark {
-    --color-1: 0 100% 63%;
-    --color-2: 270 100% 63%;
-    --color-3: 210 100% 63%;
-    --color-4: 195 100% 63%;
-    --color-5: 90 100% 63%;
+
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
 
   body {
-    @apply bg-background text-foreground selection:text-background selection:bg-primary;
+    @apply antialiased relative bg-background text-foreground selection:text-background selection:bg-primary;
   }
 
   h1 {
@@ -77,24 +77,29 @@
   p {
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
-}
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  a, button {
+  a,
+  button {
     @apply !cursor-fancy;
+  }
+
+  svg {
+    @apply shrink-0;
   }
 }
 
 @layer utilities {
   .clip-folder {
     clip-path: polygon(67% 0, 100% 33%, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }

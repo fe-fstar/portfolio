@@ -5,6 +5,7 @@ import ContactSection from '@/components/ContactSection';
 import HeroSection from '@/components/HeroSection';
 import DescriptionSection from '@/components/DescriptionSection';
 import ProjectsAndExperience from '@/components/ProjectsAndExperience';
+import SolutionsSection from '@/components/SolutionsSection';
 
 export async function generateMetadata({ params }) {
   const locale = (await params).locale;
@@ -94,6 +95,7 @@ export default async function HomePage({ params }) {
       <HeroSection />
       <DescriptionSection />
       <ProjectsAndExperience />
+      <SolutionsSection/>
       <ContactSection />
     </main>
   );

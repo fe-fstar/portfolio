@@ -35,7 +35,7 @@ export default function Experience() {
     const messages = useMessages();
 
     return (
-        <div className="w-[min(960px,95%)] mx-auto p-4">
+        <div className={cn("w-[min(960px,95%)] mx-auto p-4 overflow-y-auto", !activeExperience ? "grid place-items-center" : "")}>
             <h3 className="sr-only">{m("title")}</h3>
             <Tabs value={activeExperience} onValueChange={setActiveExperience}>
                 <TabsList className="grid w-full grid-cols-3 bg-transparent *:origin-bottom">
