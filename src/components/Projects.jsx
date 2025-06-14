@@ -52,8 +52,8 @@ export default function Projects() {
                             <TabsTrigger
                                 value={project.id}
                                 aria-label={project.title}
-                                className="w-full max-sm:justify-start !truncate rounded-xl rounded-b-none clip-folder text-sm sm:text-base opacity-50 
-                   data-[state='active']:opacity-100 !bg-card p-4"
+                                className="w-full !truncate rounded-xl rounded-b-none clip-folder text-sm sm:text-base opacity-50 
+                   data-[state='active']:opacity-100 !bg-card p-4 justify-start max-sm:px-0 max-sm:text-ellipsis"
                             >
                                 {project.title}
                             </TabsTrigger>
@@ -71,9 +71,9 @@ export default function Projects() {
                                         <CardDescription>{m(`${project.id}.description`)}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="mb-4 max-sm:text-[10px]">{m(`${project.id}.details`)}</p>
+                                        <p className="mb-4">{m(`${project.id}.details`)}</p>
                                         <div>
-                                            <p className="text-sm max-sm:text-xs font-semibold mb-2">{m("techStack")}:</p>
+                                            <p className="text-sm font-semibold mb-2">{m("techStack")}:</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {project.technologies.map((tech, index) => (
                                                     <span key={index} className={cn("px-2 py-1 rounded-md text-xs", tech.expired ? "bg-destructive text-destructive-foreground" : "bg-primary text-primary-foreground")}>

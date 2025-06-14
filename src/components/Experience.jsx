@@ -72,9 +72,9 @@ export default function Experience() {
                                         <CardDescription>{m(`${experience.id}.description`)}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        {Object.values(messages.Experience[experience.id].details).map((detail, index) => <p key={index} className="mb-4 max-sm:text-[10px]">{detail}</p>)}
+                                        {Object.values(messages.Experience[experience.id].details).map((detail, index) => <p key={index} className="mb-4">{detail}</p>)}
                                         <div>
-                                            <h4 className="text-sm max-sm:text-xs font-semibold mb-2">{m("techStack")}:</h4>
+                                            <h4 className="text-sm font-semibold mb-2">{m("techStack")}:</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 {experience.technologies.map((tech, index) => (
                                                     <span key={index} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs">
