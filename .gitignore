@@ -10,6 +10,10 @@
 !.yarn/releases
 !.yarn/versions
 
+# cloudflare workers
+/.wrangler
+/.open-next
+
 # testing
 /coverage
 
