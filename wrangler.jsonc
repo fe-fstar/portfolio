@@ -21,11 +21,5 @@
             "head_sampling_rate": 1,
             "invocation_logs": true
         }
-    },
-    "kv_namespaces": [
-        {
-            "binding": "KV",
-            "id": "6a99f7f38703493faa20e88752583423"
-        }
-    ]
+    }
 }
