@@ -1,20 +1,9 @@
 export const runtime = 'nodejs';
 
 import { NextResponse } from 'next/server';
-import { S3Client, GetObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
-
-const r2Client = new S3Client({
-  region: 'auto',
-  endpoint: process.env.R2_ENDPOINT,
-  credentials: {
-    accessKeyId: process.env.R2_ACCESS_KEY_ID,
-    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
-  },
-  runtime: 'fetch' // ensures fetch-based streaming, not Node fs
-});
-
-const BUCKET = process.env.R2_BUCKET;
-const Key = 'sample.json';
+import { db } from '@/db/drizzle';
+import { users } from '@/db/schema';
+import { eq } from 'drizzle-orm';
 
 // --- Helper: email validation
 function isValidEmail(email) {
@@ -22,39 +11,15 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-// --- Helper: read JSON from R2
-async function getUsersFromR2() {
-  try {
-    const command = new GetObjectCommand({ Bucket: BUCKET, Key });
-    const response = await r2Client.send(command);
-
-    const chunks = [];
-    for await (const chunk of response.Body) chunks.push(chunk);
-    const jsonString = Buffer.concat(chunks).toString('utf-8');
-    return JSON.parse(jsonString);
-  } catch (err) {
-    // If file doesn't exist, return empty array
-    console.log(err);
-
-    return [];
-  }
-}
-
-// --- Helper: write JSON to R2
-async function putUsersToR2(users) {
-  const command = new PutObjectCommand({
-    Bucket: BUCKET,
-    Key,
-    Body: JSON.stringify(users, null, 2),
-    ContentType: 'application/json'
-  });
-  await r2Client.send(command);
-}
-
 // --- GET: return all users
 export async function GET() {
-  const users = await getUsersFromR2();
-  return NextResponse.json(users);
+  try {
+    const allUsers = await db.select().from(users);
+    return NextResponse.json(allUsers);
+  } catch (error) {
+    console.error('GET error:', error);
+    return NextResponse.json({ message: 'Failed to fetch users' }, { status: 500 });
+  }
 }
 
 // --- POST: create new user
@@ -72,29 +37,50 @@ export async function POST(request) {
     if (!isValidEmail(email)) return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
     if (!rank || rank < 1 || rank > 10) return NextResponse.json({ message: 'Rank must be between 1-10' }, { status: 400 });
 
-    const users = await getUsersFromR2();
-    const authenticatedUser = users.find(u => u.id === Number(authenticatedUserId));
+    // Get authenticated user from database
+    const [authenticatedUser] = await db
+      .select()
+      .from(users)
+      .where(eq(users.id, Number(authenticatedUserId)))
+      .limit(1);
 
-    if (!authenticatedUser) return NextResponse.json({ message: 'Authenticated user not found' }, { status: 403 });
+    if (!authenticatedUser) {
+      return NextResponse.json({ message: 'Authenticated user not found' }, { status: 403 });
+    }
+
     if (authenticatedUser.rank > rank) {
       return NextResponse.json({
         message: 'Insufficient permissions: Your rank is not high enough to create a user with this rank (lower number = higher rank)',
       }, { status: 403 });
     }
 
-    const newUser = {
-      id: users.length + 1,
-      name: name.trim(),
-      email: email.trim(),
-      email_verified_at: new Date().toISOString(),
-      rank: parseInt(rank),
-      image: `https://picsum.photos/id/${users.length + 1}/600/400`,
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-    };
+    // Check if email already exists
+    const [existingUser] = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, email.trim()))
+      .limit(1);
 
-    users.push(newUser);
-    await putUsersToR2(users);
+    if (existingUser) {
+      return NextResponse.json({ message: 'Email already exists' }, { status: 400 });
+    }
+
+    // Get total user count for image ID
+    const allUsers = await db.select().from(users);
+    const imageId = allUsers.length + 1;
+
+    // Insert new user
+    const [newUser] = await db
+      .insert(users)
+      .values({
+        name: name.trim(),
+        email: email.trim(),
+        emailVerifiedAt: new Date(),
+        rank: parseInt(rank),
+        image: `https://picsum.photos/id/${imageId}/600/400`,
+        updatedAt: new Date(),
+      })
+      .returning();
 
     return NextResponse.json({ message: 'User created successfully', user: newUser }, { status: 201 });
   } catch (err) {
