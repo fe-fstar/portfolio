@@ -27,6 +27,7 @@ async function getJsonFromR2() {
         
         const response = await r2Client.send(command);
         const body = await response.Body.transformToString();
+        console.log(body);
         return JSON.parse(body);
     } catch (error) {
         console.error('Error fetching from R2:', error);
@@ -106,6 +107,8 @@ export async function POST(request) {
         }
 
         const currentData = await getJsonFromR2();
+        console.log("current data:", currentData);
+        console.log("user id:", authenticatedUserId);
         
         const authenticatedUser = currentData.find(user => user.id === Number(authenticatedUserId));
         
